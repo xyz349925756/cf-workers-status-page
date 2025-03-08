@@ -1,6 +1,6 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  title: 'My server status page'
+  url: 'https://status.cloudb.pub' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -15,25 +15,108 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: www-cloudb-pub # unique identifier
+    name: www.cloudb.pub
+    description: '我的主页' # default=empty
+    url: 'https://www.cloudb.pub' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: Proxy
+    name: Proxy代理页面
+    description: '探索墙外的世界！'
+    url: 'https://proxy.cloudb.pub'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: Google-Translate
+    name: Google Translate
+    url: 'https://googletranslate.cloudb.pub'
     method: GET
     expectStatus: 200
+
+  - id: Docker-Proxy
+    name: Docker Proxy
+    url: 'https://docker.cloudb.pub'
+    method: GET
+    expectStatus: 200
+
+  - id: Neat-reader
+    name: Neat-reader
+    url: 'https://neat-reader.cloudb.pub'
+    method: GET
+    expectStatus: 200
+
+  - id: It-tools
+    name: It-tools
+    url: 'https://it-tools.cloudb.pub'
+    method: GET
+    expectStatus: 200
+    
+  - id: Mind
+    name: 思维导图
+    url: 'https://mind.cloudb.pub'
+    method: GET
+    expectStatus: 200
+
+  - id: cloudb-1
+    name: Search 镜像1
+    url: 'https://s.cloudb.pub'
+    method: GET
+    expectStatus: 200
+    
+  - id: cloudb-2
+    name: Search 镜像2
+    url: 'https://sub.cloudb.pub'
+    method: GET
+    expectStatus: 200
+
+  - id: uptime
+    name: uptime
+    url: 'https://uptime.cloudb.pub/'
+    method: GET
+    expectStatus: 200
+    
+  - id: Download-Test
+    name: Download Test
+    url: 'https://test.cloudb.pub/1k'
+    method: GET
+    expectStatus: 200
+    linkable: false
+
+  - id: V1
+    name: V1
+    url: 'https://v1.349925756.xyz'
+    method: GET
+    expectStatus: 200
+    linkable: false
+    
+  - id: V2
+    name: V2
+    url: 'https://v2.349925756.xyz'
+    method: GET
+    expectStatus: 200
+    linkable: false
+
+  - id: T1
+    name: T1
+    url: 'https://t1.349925756.xyz'
+    method: GET
+    expectStatus: 200
+    linkable: false
+    
+  - id: T2
+    name: T2
+    url: 'https://t2.349925756.xyz'
+    method: GET
+    expectStatus: 200
+    linkable: false
+
+  # - id: 
+  #   name: 
+  #   url: ''
+  #   method: GET
+  #   expectStatus: 200
